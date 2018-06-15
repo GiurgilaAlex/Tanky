@@ -10,24 +10,17 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject ball;
 	public Transform ballSpawnPoint;
 	public VirtualJoystick joystick;
+	public Transform body;
 
 	private float horizontal;
 	private float vertical;
 	//private Vector3 newPos = Vector3.zero;
-	//private GameObject body;
-
-	void Start()
-	{
-		//body = transform.GetChild(0).GetChild(0).GetComponent<GameObject>();
-	}
 
 	void Update()
 	{
 		horizontal = joystick.Horizontal();
 		vertical = joystick.Vertical();
-
-		Debug.Log("horizontal: " + horizontal + "    vertical: " + vertical);
-
+		
 		MovePosition();
 
 		if (Input.GetKeyDown (KeyCode.Space)) 
@@ -54,6 +47,11 @@ public class PlayerMovement : MonoBehaviour {
 				speed = 5f;
 		else
 			speed = 10f;
+
+		Vector3 rotation = joystick.DirectionToRotate();
+		if(rotation != Vector3.zero)
+		body.rotation = Quaternion.Euler(body.transform.rotation.x,rotation.y,body.transform.rotation.z);
+
 		Vector3 movement = new Vector3(horizontal,0,vertical);
 		movement = movement.normalized * speed * Time.deltaTime;
 		rb.MovePosition(rb.position + movement);

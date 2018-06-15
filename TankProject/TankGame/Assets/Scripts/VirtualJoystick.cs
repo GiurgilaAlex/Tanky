@@ -61,4 +61,12 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler, I
 	{
 		return InputDirection.z;
 	}
+
+	public Vector3 DirectionToRotate()
+	{
+		Vector3 dir = new Vector3(InputDirection.x,0,InputDirection.z);
+		Quaternion lookRotation = Quaternion.LookRotation(dir);
+		Vector3 rotation = lookRotation.eulerAngles;
+		return rotation;
+	}
 }
