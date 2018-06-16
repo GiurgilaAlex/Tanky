@@ -40,20 +40,29 @@ public class PlayerMovement : MonoBehaviour {
 		float temp1, temp2;
 		temp1 = horizontal;
 		temp2 = vertical;
-		if(Mathf.Abs(temp1) < 0.25 && Mathf.Abs(temp2) < 0.25)
+		/*if(Mathf.Abs(temp1) < 0.25 && Mathf.Abs(temp2) < 0.25)
 			speed = 2.5f;
 		else
 			if(Mathf.Abs(temp1) < 0.5 && Mathf.Abs(temp2) < 0.5)
 				speed = 5f;
 		else
 			speed = 10f;
-
+		*/
+		float currentSpeed;
+		if(Mathf.Abs(temp1) > Mathf.Abs (temp2))
+		{
+			currentSpeed = speed * Mathf.Abs(temp1);
+		}
+		else 
+		{
+			currentSpeed = speed * Mathf.Abs(temp2);
+		}
 		Vector3 rotation = joystick.DirectionToRotate();
 		if(rotation != Vector3.zero)
 		body.rotation = Quaternion.Euler(body.transform.rotation.x,rotation.y,body.transform.rotation.z);
-
+		
 		Vector3 movement = new Vector3(horizontal,0,vertical);
-		movement = movement.normalized * speed * Time.deltaTime;
+		movement = movement.normalized * currentSpeed * Time.deltaTime;
 		rb.MovePosition(rb.position + movement);
 	}
 }
