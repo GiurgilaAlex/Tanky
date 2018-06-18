@@ -18,7 +18,7 @@ public class BallController : MonoBehaviour {
 
 	void Update()
 	{
-		transform.Translate(dir*speed*Time.deltaTime);
+		transform.Translate(-dir*speed*Time.deltaTime);
 	}
 
 	void OnCollisionEnter(Collision col)

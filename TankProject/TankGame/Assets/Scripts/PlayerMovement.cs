@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public float speed = 10;
+	public float MaxSpeed = 10;
+	public float currentSpeed;
 	public int rotationSpeed = 25;
 	public Rigidbody rb;
 	public GameObject ball;
@@ -48,14 +49,13 @@ public class PlayerMovement : MonoBehaviour {
 		else
 			speed = 10f;
 		*/
-		float currentSpeed;
 		if(Mathf.Abs(temp1) > Mathf.Abs (temp2))
 		{
-			currentSpeed = speed * Mathf.Abs(temp1);
+			currentSpeed = MaxSpeed * Mathf.Abs(temp1);
 		}
 		else 
 		{
-			currentSpeed = speed * Mathf.Abs(temp2);
+			currentSpeed = MaxSpeed * Mathf.Abs(temp2);
 		}
 		Vector3 rotation = joystick.DirectionToRotate();
 		if(rotation != Vector3.zero)
