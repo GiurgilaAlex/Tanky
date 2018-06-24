@@ -5187,6 +5187,21 @@ Prefab:
       propertyPath: m_TagString
       value: Tank_Turret
       objectReference: {fileID: 0}
+    - target: {fileID: 23447804679614222, guid: 12264c5f9b5d29b4f89c6a65b59d2e1c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 922d3491846cc4c4097b5da184e9f203, type: 2}
+    - target: {fileID: 23417035121976924, guid: 12264c5f9b5d29b4f89c6a65b59d2e1c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 922d3491846cc4c4097b5da184e9f203, type: 2}
+    - target: {fileID: 23470672680556596, guid: 12264c5f9b5d29b4f89c6a65b59d2e1c,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 35d8bd605e5c8b249a90904aaee6220b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 12264c5f9b5d29b4f89c6a65b59d2e1c, type: 2}
   m_IsPrefabParent: 0
