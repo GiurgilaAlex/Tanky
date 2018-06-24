@@ -9,7 +9,7 @@ Material:
   m_Name: shiny 3
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0, g: 0.13080311, b: 1, a: 0.34117648}
-    - _EmissionColor: {r: 0, g: 0.09855259, b: 1.8940247, a: 1}
+    - _Color: {r: 0, g: 0.13080311, b: 1, a: 0.23921569}
+    - _EmissionColor: {r: 0, g: 0.25199005, b: 1.083177, a: 1}
