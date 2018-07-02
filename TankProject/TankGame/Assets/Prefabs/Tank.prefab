@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 23417035121976924}
   m_Layer: 0
   m_Name: tank_turret
-  m_TagString: Untagged
+  m_TagString: Tank_Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,9 +105,10 @@ GameObject:
   - component: {fileID: 95647820072114424}
   - component: {fileID: 54084309471059842}
   - component: {fileID: 65517218047918142}
+  - component: {fileID: 114026639895890028}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Tank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,8 +145,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979956478794388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.36293, y: 6.221, z: 2.871225}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000028312203}
+  m_LocalPosition: {x: -15.69, y: 6.987, z: 3.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4616383428514786}
@@ -155,7 +156,7 @@ Transform:
   - {fileID: 4834599965486244}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.99998, z: 0}
 --- !u!4 &4761201186286580
 Transform:
   m_ObjectHideFlags: 1
@@ -210,7 +211,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 35d8bd605e5c8b249a90904aaee6220b, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -245,7 +246,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: d246ea356f79ff44aa5a10f3e00707c2, type: 2}
+  - {fileID: 2100000, guid: 922d3491846cc4c4097b5da184e9f203, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,7 +281,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0b53f9dac044d4243aa6fa225d28868c, type: 2}
+  - {fileID: 2100000, guid: 922d3491846cc4c4097b5da184e9f203, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -315,7 +316,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 35d8bd605e5c8b249a90904aaee6220b, type: 2}
+  - {fileID: 2100000, guid: 03e0fb8214abe054ebe2f3b46ef980ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,10 +373,10 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &65517218047918142
@@ -408,3 +409,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114026639895890028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979956478794388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb474eb03856a94cac6169919d0630f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSpeed: 10
+  currentSpeed: 0
+  rotationSpeed: 25
+  rb: {fileID: 54084309471059842}
+  ball: {fileID: 1173578149788614, guid: d6a01143696438e42b37f0094424ffc2, type: 2}
+  ballSpawnPoint: {fileID: 4834599965486244}
+  joystick: {fileID: 0}
+  body: {fileID: 4616383428514786}
