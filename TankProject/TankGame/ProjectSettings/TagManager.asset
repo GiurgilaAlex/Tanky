@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tank
   - Tank_Turret
+  - Bonus_Rocket
   layers:
   - Default
   - TransparentFX

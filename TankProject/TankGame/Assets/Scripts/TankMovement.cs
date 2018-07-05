@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour {
 
+    /* Ataseaza virtual joystickul la axele Horizontal si Vertical.. */
+
     public int rotSpeed = 100;
     public float moveSpeed = 10;
 
@@ -36,7 +38,7 @@ public class TankMovement : MonoBehaviour {
         {
             rotating = 0;
         }
-        
+
     }
 
     void FixedUpdate()
@@ -61,4 +63,6 @@ public class TankMovement : MonoBehaviour {
         }
         
     }
+
+    
 }

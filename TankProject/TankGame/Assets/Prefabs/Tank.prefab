@@ -105,7 +105,8 @@ GameObject:
   - component: {fileID: 95647820072114424}
   - component: {fileID: 54084309471059842}
   - component: {fileID: 65517218047918142}
-  - component: {fileID: 114026639895890028}
+  - component: {fileID: 114199006161114974}
+  - component: {fileID: 114081899707382246}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Tank
@@ -176,13 +177,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489833008603754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2985, z: -0.4087}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -0, y: 0.2985, z: -0.436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4631494573812124}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -180, z: 0}
 --- !u!4 &4971788839953674
 Transform:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 35d8bd605e5c8b249a90904aaee6220b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -409,22 +410,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114026639895890028
+--- !u!114 &114081899707382246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979956478794388}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fb474eb03856a94cac6169919d0630f, type: 3}
+  m_Script: {fileID: 11500000, guid: d1c0de90fced3e54bbe4dc39dfeaea2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 10
-  currentSpeed: 0
-  rotationSpeed: 25
-  rb: {fileID: 54084309471059842}
-  ball: {fileID: 1173578149788614, guid: d6a01143696438e42b37f0094424ffc2, type: 2}
-  ballSpawnPoint: {fileID: 4834599965486244}
-  joystick: {fileID: 0}
-  body: {fileID: 4616383428514786}
+  bulletSpawnPoint: {fileID: 4834599965486244}
+  weapons:
+  - {fileID: 1173578149788614, guid: d6a01143696438e42b37f0094424ffc2, type: 2}
+  - {fileID: 1933432659645230, guid: f9e0d6ab81a6c59419ca70e7f03c482f, type: 2}
+  dropables: []
+--- !u!114 &114199006161114974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979956478794388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59e2c1c5bd73a84486c903cc7581202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 120
+  moveSpeed: 2.5

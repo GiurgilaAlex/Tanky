@@ -4,18 +4,11 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: sink
-    100004: wall
     400000: //RootNode
-    400002: sink
-    400004: wall
     2100000: unnamed
-    2300000: sink
-    2300002: wall
-    3300000: sink
-    3300002: wall
-    4300000: sink
-    4300002: wall
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: wall
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
