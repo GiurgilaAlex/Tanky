@@ -34,7 +34,8 @@ ScriptedImporter:
       type=\"0\" value=\"1\" />\n  <presetinput identifier=\"Wave_Lvl2_Rotation_Random\"
       uid=\"3298977716\" type=\"0\" value=\"68\" />\n  <presetinput identifier=\"Wave_Distortion_strength\"
       uid=\"3298982810\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"Wave_Lvl1_Scale\"
-      uid=\"3298982781\" type=\"0\" value=\"2\" />\n </sbspreset>\n"
+      uid=\"3298982781\" type=\"0\" value=\"2\" />\n  <presetinput identifier=\"Dune_Hills_Sharpness\"
+      uid=\"3298980177\" type=\"0\" value=\"2.2\" />\n </sbspreset>\n"
     shaderName: Standard
     outputNames: 
     texturePackingList:

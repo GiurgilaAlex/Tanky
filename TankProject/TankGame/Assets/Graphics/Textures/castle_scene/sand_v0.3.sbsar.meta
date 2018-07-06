@@ -1,0 +1,76 @@
+fileFormatVersion: 2
+guid: 3715383192bb49d4286cd94495265106
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: sand_v0.3/sand_v0.3
+    400000: sand_v0.3/sand_v0.3/Transform
+    2100000: mat.Sand_v0.2
+    2300000: sand_v0.3/sand_v0.3/MeshRenderer
+    2800000: Sand_v0.2_Base Color
+    2800002: Sand_v0.2_Normal
+    2800004: Sand_v0.2_Metallic
+    3300000: sand_v0.3/sand_v0.3/MeshFilter
+    11400000: sbsar
+    11400002: graph0
+    13500000: sand_v0.3/sand_v0.3/SphereCollider
+    100100000: sand_v0.3
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 232528478, guid: 43a8bbf65be290d44ba52b94476242b9, type: 3}
+  mGraphInstanceData:
+  - graphLabel: Sand_v0.2
+    graphDescIndex: 0
+    generateAllOutputs: 0
+    generateMipMaps: 1
+    preset: " <sbspreset pkgurl=\"pkg://sand01\" label=\"\" >\n  <presetinput identifier=\"$outputsize\"
+      uid=\"3026286459\" type=\"8\" value=\"11,11\" />\n  <presetinput identifier=\"Bumps_Intensity\"
+      uid=\"3228554555\" type=\"0\" value=\"0.689\" />\n </sbspreset>\n"
+    shaderName: Standard
+    outputNames: Base Color,Normal,Metallic
+    texturePackingList:
+    - outputName: Base Color
+      alphaSource: Base Color
+    - outputName: Normal
+      alphaSource: Normal
+    - outputName: Roughness
+      alphaSource: Roughness
+    - outputName: Metallic
+      alphaSource: Smoothness
+    colorSpaceList:
+    - outputName: Base Color
+      bLinear: 0
+    - outputName: Normal
+      bLinear: 1
+    - outputName: Roughness
+      bLinear: 1
+    - outputName: Metallic
+      bLinear: 1
+    inputTextureMap: []
+    targetSettingList:
+    - label: Default
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 2048
+      textureHeight: 2048
+      textureFormat: 0
+      loadBehavior: 0
+    - label: Standalone
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      loadBehavior: 0
+    - label: iPhone
+      bOverride: 0
+      bLockRatio: 1
+      bHighQuality: 0
+      textureWidth: 256
+      textureHeight: 256
+      textureFormat: 0
+      loadBehavior: 0
+    material: {fileID: 2100000, guid: 3715383192bb49d4286cd94495265106, type: 3}
