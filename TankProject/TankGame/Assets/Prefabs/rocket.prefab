@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887970963588022}
   m_LocalRotation: {x: -0.7071064, y: -0, z: -0, w: 0.70710725}
-  m_LocalPosition: {x: 0, y: 0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0021, z: -0}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 4383781182974340}
@@ -68,8 +68,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933432659645230}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -29.939999, y: 5.664313, z: 4.4500003}
-  m_LocalScale: {x: 3, y: 1.6500009, z: 3}
+  m_LocalPosition: {x: -16.971468, y: 8.748, z: 4.982}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4152445177101302}
   m_Father: {fileID: 0}
@@ -90,7 +90,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: f400baade3f87844dadba09b605130a0, type: 2}
+  - {fileID: 2100000, guid: 31d0b84180750624db42cd4b478d4f25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933432659645230}
-  m_Mesh: {fileID: 4300004, guid: 25fe9d06e471bf643b0b7936d9dbaa2d, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 45f63f779ead6514dba8bad4522187c3, type: 3}
 --- !u!54 &54064698732226994
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -142,8 +142,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0435435, y: 0.24462605, z: 0.046110928}
-  m_Center: {x: -0.00012588501, y: 0.026719002, z: -0.00023349375}
+  m_Size: {x: 0.013905907, y: 0.044503663, z: 0.015205187}
+  m_Center: {x: -0.00020513535, y: -0.02218995, z: 0.00016281605}
 --- !u!114 &114857654697815194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,7 +927,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2

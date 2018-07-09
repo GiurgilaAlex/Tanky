@@ -8,7 +8,7 @@ public class CollectableWeapon : MonoBehaviour {
 
 
     public int weaponID = 0;
-    //public int weaponBulletCountAllowed = 3;
+    public int howManyCanHeShoot = 0;
 
 	void Update () {
 		
@@ -20,6 +20,7 @@ public class CollectableWeapon : MonoBehaviour {
         {
             TankWeaponSystem tws = collision.gameObject.GetComponent<TankWeaponSystem>();
             tws.loadedWeapon = weaponID;
+            tws.howManyCanIShoot = howManyCanHeShoot;
             Destroy(this.gameObject, 0.02f);
         }
     }
