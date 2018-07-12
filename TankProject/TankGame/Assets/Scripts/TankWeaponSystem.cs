@@ -23,6 +23,8 @@ public class TankWeaponSystem : MonoBehaviour {
     public Text weaponCounter;
     public Text dropableCounter;
 
+    public string fireAxisName;
+    public string dropAxisName;
 
     void Start () {
         ClearLoadedDropable();
@@ -33,7 +35,7 @@ public class TankWeaponSystem : MonoBehaviour {
 	
 	void Update () {
         UpdateUI();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown(fireAxisName))
         {
             if(loadedWeapon == 0)
             {
@@ -55,7 +57,7 @@ public class TankWeaponSystem : MonoBehaviour {
                 //Shoot(loadedWeapon);
             }
         }
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetButtonDown(dropAxisName))
         {
             if (howManyCanIDrop > 0)
             {

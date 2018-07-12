@@ -6,6 +6,11 @@ public class TankMovement : MonoBehaviour {
 
     /* Ataseaza virtual joystickul la axele Horizontal si Vertical.. */
 
+    public string hAxisName;
+    public string vAxisName;
+    //public string fireAxisName;
+    //public string dropAxisName;
+
     public int rotSpeed = 100;
     public float moveSpeed = 10;
 
@@ -23,8 +28,8 @@ public class TankMovement : MonoBehaviour {
 
     private void Update()
     {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
+        h = Input.GetAxis(hAxisName);
+        v = Input.GetAxis(vAxisName);
         
         if( h > 0)
         {

@@ -7,6 +7,7 @@ TagManager:
   - Tank
   - Tank_Turret
   - Bonus_Rocket
+  - DoesDamage
   layers:
   - Default
   - TransparentFX

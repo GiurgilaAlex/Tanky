@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 65517218047918142}
   - component: {fileID: 114199006161114974}
   - component: {fileID: 114081899707382246}
+  - component: {fileID: 114172923194981858}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Tank
@@ -162,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979956478794388}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000028312203}
-  m_LocalPosition: {x: -15.69, y: 6.987, z: 3.62}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4616383428514786}
@@ -458,10 +459,10 @@ MonoBehaviour:
   dropables:
   - {fileID: 1839073934861144, guid: 876477dd967f5a04196b6bc4e3d69447, type: 2}
   weaponsImgs:
-  - {fileID: 21300002, guid: 7453ba785f17b6842a8707d61c7dd2ee, type: 3}
-  - {fileID: 21300004, guid: 7453ba785f17b6842a8707d61c7dd2ee, type: 3}
+  - {fileID: 21300002, guid: 30e8fca1e7fca144286f16bf80239a01, type: 3}
+  - {fileID: 21300000, guid: 30e8fca1e7fca144286f16bf80239a01, type: 3}
   dropableImgs:
-  - {fileID: 21300000, guid: 7453ba785f17b6842a8707d61c7dd2ee, type: 3}
+  - {fileID: 0}
   loadedWeapon: 0
   howManyCanIShoot: 0
   loadedDropable: 0
@@ -470,6 +471,22 @@ MonoBehaviour:
   loadedDropableImg: {fileID: 0}
   weaponCounter: {fileID: 0}
   dropableCounter: {fileID: 0}
+  fireAxisName: 
+  dropAxisName: 
+--- !u!114 &114172923194981858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1979956478794388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8e855e60dabdf4a8fb6e41875ed764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthRadialImage: {fileID: 0}
+  maxHealth: 1000
+  health: 0
 --- !u!114 &114199006161114974
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -481,5 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59e2c1c5bd73a84486c903cc7581202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hAxisName: 
+  vAxisName: 
   rotSpeed: 120
   moveSpeed: 2.5
