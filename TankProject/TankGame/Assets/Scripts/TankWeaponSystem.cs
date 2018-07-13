@@ -7,6 +7,7 @@ public class TankWeaponSystem : MonoBehaviour {
 
     public Transform bulletSpawnPoint;  //where the buuuullets come ouuuut...iiihaaaa
     public Transform dropableSpawnPoint;
+    public GameObject rayTransform;
 
     public GameObject[] weapons;    // reference to the weapons prefabs
     public GameObject[] dropables;   // reference to the dropables prefabs
@@ -25,6 +26,8 @@ public class TankWeaponSystem : MonoBehaviour {
 
     public string fireAxisName;
     public string dropAxisName;
+    public bool needHoldForThisWeapon = false;
+    public float machineGunrate = 3F;
 
     void Start () {
         ClearLoadedDropable();
@@ -34,73 +37,105 @@ public class TankWeaponSystem : MonoBehaviour {
 	}
 	
 	void Update () {
-        UpdateUI();
-        if (Input.GetButtonDown(fireAxisName))
+        if (!needHoldForThisWeapon)
         {
-            if(loadedWeapon == 0)
+            if (Input.GetButtonDown(fireAxisName))
             {
-                Shoot(loadedWeapon);
+                Shoot();
             }
-            else if (howManyCanIShoot > 0) //enters only if the loaded weapon is not the default one
+        }
+        else //////////TO DO: Implement the Machine Gun
+        {
+            if (Input.GetButtonDown(fireAxisName))
             {
-                Shoot(loadedWeapon);
-                howManyCanIShoot--;
-                if(howManyCanIShoot <= 0)
+                InvokeRepeating("Shoot", 0.0f, machineGunrate);
+            }
+            if (Input.GetButtonUp(fireAxisName) || howManyCanIShoot <= 0 )
+            {
+                if(howManyCanIShoot <= 0) { ClearLoadedWeapon(); needHoldForThisWeapon = false; }
+                CancelInvoke();
+                
+            }
+        }
+        
+        if (Input.GetButtonDown(dropAxisName))
+        {
+            Drop();
+        }
+    }
+
+    void Shoot()
+    {
+        if(howManyCanIShoot > 0)
+        {
+            Instantiate(weapons[loadedWeapon], bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            howManyCanIShoot--;
+            if(howManyCanIShoot <= 0)
+            {
+                ClearLoadedWeapon();
+                
+            }
+        }
+        else //means the default is loaded
+        {
+            Instantiate(weapons[loadedWeapon], bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        }
+        UpdateUI();
+    }
+
+    void Drop()
+    {
+        if (loadedDropable != -1)
+        {
+            if (howManyCanIDrop > 0)
+            {
+                Instantiate(dropables[loadedDropable], dropableSpawnPoint.position, dropableSpawnPoint.rotation);
+                howManyCanIDrop--;
+                if(howManyCanIDrop <= 0)
                 {
-                    ClearLoadedWeapon();
+                    ClearLoadedDropable();
                 }
             }
             else
             {
-                Debug.Log("Am ajuns in else..Cum? TankWeaponSystem.cs");
-                //ClearLoadedWeapon();
-                //Shoot(loadedWeapon);
-            }
-        }
-        if (Input.GetButtonDown(dropAxisName))
-        {
-            if (howManyCanIDrop > 0)
-            {
-                Drop(loadedDropable);
-                howManyCanIDrop--;
-            }
-            else
-            {
                 ClearLoadedDropable();
+                
             }
+            UpdateUI();
         }
-        
-    }
-
-    void Shoot(int weaponCode)  //instantiates the prefab for the loaded weapon (each prefab will have it s own script, so the bullets are on their own when they leave
-    {
-        GameObject clone = Instantiate(weapons[weaponCode], bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-
-        Destroy(clone, 2.0f);
-    }
-
-    void Drop(int dropableCode)  //dropableCode is the loadedDropable
-    {
-        GameObject clone = Instantiate(dropables[dropableCode], dropableSpawnPoint.position, dropableSpawnPoint.rotation);
-
-        //Destroy(clone, 2.0f);
+        else
+        {
+            Debug.Log("You don't own any dropables!");
+        }
     }
 
     void ClearLoadedWeapon()
     {
+        if (loadedWeapon == 3)
+        {
+            rayTransform.SetActive(false);
+        }
         loadedWeapon = 0;
+        UpdateUI();
     }
+
     void ClearLoadedDropable()
     {
+        
         loadedDropable = -1;
+        UpdateUI();
     }
+
     void SetUI()
     {
         weaponCounter.enabled = false;
         dropableCounter.enabled = false;
         loadedDropableImg.enabled = false;
+        rayTransform.SetActive(false);
+        UpdateUI();
     }
-    void UpdateUI()
+
+    public void UpdateUI()
     {
         loadedWeaponImg.sprite = weaponsImgs[loadedWeapon];
         if(howManyCanIShoot > 0)

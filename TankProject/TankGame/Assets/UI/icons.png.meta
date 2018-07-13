@@ -2,11 +2,14 @@ fileFormatVersion: 2
 guid: 30e8fca1e7fca144286f16bf80239a01
 TextureImporter:
   fileIDToRecycleName:
-    21300000: icons_0
-    21300002: icons_2
-    21300004: icons_1
+    21300000: iconMine
+    21300002: iconSniper
+    21300004: icon_C4
     21300006: icons_3
-    21300008: icons_4
+    21300008: iconRocket
+    21300010: icon_defaultBullet
+    21300012: icon_biggerRocket
+    21300014: iconMachineGun
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icons_1
+      name: iconMine
       rect:
         serializedVersion: 2
-        x: 1247
-        y: 60
-        width: 570
-        height: 490
+        x: 0
+        y: 360
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,19 +115,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cca409e43212e246b5657dd73b89f8c
+      spriteID: 626dfc0c199e13e42bdee69e48918ec0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_2
+      name: icon_C4
       rect:
         serializedVersion: 2
-        x: 586
-        y: 60
-        width: 570
-        height: 490
+        x: 360
+        y: 360
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,19 +135,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 733560eb660a5a644b1b1f806882ecd9
+      spriteID: 06ac1addf5db2e340bd80a08419375db
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_0
+      name: iconSniper
       rect:
         serializedVersion: 2
-        x: 7
-        y: 60
-        width: 552
-        height: 490
+        x: 720
+        y: 360
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde8f7216cab9744e9a9b5c716efd899
+      spriteID: b56858f4b7715464689def29697464d0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_3
+      name: iconRocket
       rect:
         serializedVersion: 2
-        x: 715
-        y: 646
-        width: 426
-        height: 425
+        x: 0
+        y: 0
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,19 +175,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36242df8082bc04197c78a49ee81b0d
+      spriteID: 58e65394713358c44aa25fb4c34478fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: icons_4
+      name: icon_defaultBullet
       rect:
         serializedVersion: 2
-        x: 133
-        y: 646
-        width: 426
-        height: 425
+        x: 360
+        y: 0
+        width: 360
+        height: 360
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,7 +195,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64423bdb8bb06d649a3308e8beb1320f
+      spriteID: b6821c898dfe2b64c8b989840cb09e4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon_biggerRocket
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e2c07c6b4b4cf4ab4a678145c4b727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iconMachineGun
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7c3c0fa8d8a5f42addd774c2b1d0f2
       vertices: []
       indices: 
       edges: []

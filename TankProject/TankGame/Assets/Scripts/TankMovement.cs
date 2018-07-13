@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour {
 
-    /* Ataseaza virtual joystickul la axele Horizontal si Vertical.. */
+  ////TO DO : Implement a way the tank moves only when the tank touches the ground, or you ll end up with a flying tank 
 
+    public Vector3 _centerOfMasss;
     public string hAxisName;
     public string vAxisName;
     //public string fireAxisName;
@@ -24,10 +25,12 @@ public class TankMovement : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = _centerOfMasss;
     }
 
     private void Update()
     {
+        rb.centerOfMass = _centerOfMasss;
         h = Input.GetAxis(hAxisName);
         v = Input.GetAxis(vAxisName);
         

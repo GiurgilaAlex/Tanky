@@ -11,14 +11,51 @@ public class CollectableDropable : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Tank")
+        {
+            TankWeaponSystem tws = other.gameObject.GetComponent<TankWeaponSystem>();
+
+            if (tws.loadedDropable == -1)
+            {
+                tws.loadedDropable = dropableID;
+                tws.howManyCanIDrop = howManyCanHeDrop;
+                tws.UpdateUI();
+                Destroy(this.gameObject, 0.02f);
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Tank")
+        {
+            TankWeaponSystem tws = other.gameObject.GetComponent<TankWeaponSystem>();
+
+            if (tws.loadedDropable == -1)
+            {
+                tws.loadedDropable = dropableID;
+                tws.howManyCanIDrop = howManyCanHeDrop;
+                tws.UpdateUI();
+                Destroy(this.gameObject, 0.02f);
+            }
+        }
+    }
+
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Tank")
         {
             TankWeaponSystem tws = collision.gameObject.GetComponent<TankWeaponSystem>();
-            tws.loadedDropable = dropableID;
-            tws.howManyCanIDrop = howManyCanHeDrop;
-            Destroy(this.gameObject, 0.02f);
+            
+            if (tws.loadedDropable == -1)
+            {
+                tws.loadedDropable = dropableID;
+                tws.howManyCanIDrop = howManyCanHeDrop;
+                tws.UpdateUI();
+                Destroy(this.gameObject, 0.02f);
+            }
         }
-    }
+    }*/
 }

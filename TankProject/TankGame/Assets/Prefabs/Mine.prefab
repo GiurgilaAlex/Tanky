@@ -21,13 +21,13 @@ GameObject:
   - component: {fileID: 4415348474850758}
   - component: {fileID: 33009204934697384}
   - component: {fileID: 23230116444559656}
-  - component: {fileID: 95180323860265984}
   - component: {fileID: 65541170919821552}
   - component: {fileID: 114154836572533508}
   - component: {fileID: 54184980875131864}
+  - component: {fileID: 65005072091331982}
   m_Layer: 0
   m_Name: Mine
-  m_TagString: Untagged
+  m_TagString: Explosive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +38,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839073934861144}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -14.833391, y: 5.7443147, z: 7.014162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +94,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1839073934861144}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -102,6 +102,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65005072091331982
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839073934861144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8264276, y: 0.8429405, z: 0.285517}
+  m_Center: {x: 0, y: -1.7458e-16, z: 0.05021501}
 --- !u!65 &65541170919821552
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -114,24 +126,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.599234, y: 0.5992341, z: 0.09413291}
   m_Center: {x: 0, y: 2.7290025e-17, z: 0.053363558}
---- !u!95 &95180323860265984
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839073934861144}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ff44dd82f26fd994787e1a62a97a43d0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114154836572533508
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -28,7 +28,25 @@ public class Bullet : MonoBehaviour {
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        converted = Convert.ToInt32(timer * damageDropOverTime);
+        if (other.gameObject.tag == "Tank")
+        {
+            other.gameObject.GetComponent<TankHealth>().RemoveHealth(maxDamage - converted);
+        }
+        //Debug.Log("Damage Drop: " + converted);
+        //Debug.Log("Damage Given: " + (maxDamage - converted));
+        Destroy(this.gameObject);
+    }
+
     private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.gameObject, .05f);
+    }
+}
+    
+    /*private void OnCollisionEnter(Collision collision)
     {
         converted = Convert.ToInt32(timer* damageDropOverTime);
         if (collision.gameObject.tag == "Tank")
@@ -38,5 +56,4 @@ public class Bullet : MonoBehaviour {
         Debug.Log("Damage Drop: " + converted);
         Debug.Log("Damage Given: " + (maxDamage-converted));
         Destroy(this.gameObject);
-    }
-}
+    }*/
